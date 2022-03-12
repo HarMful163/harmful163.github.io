@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function() {
         lines[i].style.width = item.innerHTML;
     });
     
-    // _skills cards
+       // _skills cards
 
     const buttonOpen = document.querySelectorAll('.skills__skill-open'),
           buttonClose = document.querySelectorAll('.skills__skill-close');
@@ -83,11 +83,10 @@ window.addEventListener('DOMContentLoaded', function() {
                     toggleClasses(skill);
                 } if(i == 3) {
                     const skill = document.querySelectorAll('.skills__figma');
-                    toggleClasses(skill);skill
+                    toggleClasses(skill);
                 }
             });
         });
-
     
 
     //menu 
