@@ -39,45 +39,54 @@ window.addEventListener('DOMContentLoaded', function() {
     counters.forEach( (item, i) => {
         lines[i].style.width = item.innerHTML;
     });
-
-    // _skills cards
+    
+       // _skills cards
 
     const buttonOpen = document.querySelectorAll('.skills__skill-open'),
-          buttonClose = document.querySelectorAll('.skills__skill-close'),
-          skillWrapper = document.querySelectorAll('.skills__skill-wrapper'),
-          skillList = document.querySelectorAll('.skills__skill-list');
-        
-        
+          buttonClose = document.querySelectorAll('.skills__skill-close');
 
-        function showList() {
-            skillWrapper.forEach((item) => {
-                item.classList.toggle('skills__skill-wrapper-active');
-            });
-
-            skillList.forEach((item) => {
+        function toggleClasses(skill) {
+            skill.forEach(item => {
                 item.classList.toggle('skills__skill-list-active');
-            });
-        }
-
-        function showWrapper() {
-            skillWrapper.forEach((item) => {
                 item.classList.toggle('skills__skill-wrapper-active');
-            });
-
-            skillList.forEach((item) => {
-                item.classList.toggle('skills__skill-list-active');
-            });
+            })
         }
+  
+        buttonOpen.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                if(i == 0) {
+                    const skill = document.querySelectorAll('.skills__html5');
+                    toggleClasses(skill);
+                } if(i == 1) {
+                    const skill = document.querySelectorAll('.skills__css3');
+                    toggleClasses(skill);
+                } if(i == 2) {
+                    const skill = document.querySelectorAll('.skills__js');
+                    toggleClasses(skill);
+                } if(i == 3) {
+                    const skill = document.querySelectorAll('.skills__figma');
+                    toggleClasses(skill);
+                }
+            });
+        });
 
-
-        buttonOpen.forEach((btn) => {
-            btn.addEventListener('click', showList);
-        })
-
-        buttonClose.forEach((btn) => {
-            btn.addEventListener('click', showWrapper);
-        })
-
+        buttonClose.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                if(i == 0) {
+                    const skill = document.querySelectorAll('.skills__html5');
+                    toggleClasses(skill);
+                } if(i == 1) {
+                    const skill = document.querySelectorAll('.skills__css3');
+                    toggleClasses(skill);
+                } if(i == 2) {
+                    const skill = document.querySelectorAll('.skills__js');
+                    toggleClasses(skill);
+                } if(i == 3) {
+                    const skill = document.querySelectorAll('.skills__figma');
+                    toggleClasses(skill);
+                }
+            });
+        });
     
 
     //menu 
