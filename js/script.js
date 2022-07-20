@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function() {
         header.classList.toggle("sticky", window.scrollY > 0);
     })
 
-        //scroll
+    //scroll
 
     const menuLinks = document.querySelectorAll('[data-goto]');
 
@@ -29,7 +29,6 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
 
     //_skills procents.
 
@@ -39,8 +38,8 @@ window.addEventListener('DOMContentLoaded', function() {
     counters.forEach( (item, i) => {
         lines[i].style.width = item.innerHTML;
     });
-    
-       // _skills cards
+
+    // _skills cards
 
     const buttonOpen = document.querySelectorAll('.skills__skill-open'),
           buttonClose = document.querySelectorAll('.skills__skill-close');
@@ -87,7 +86,6 @@ window.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    
 
     //menu 
 
